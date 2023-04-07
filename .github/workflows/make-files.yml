@@ -46,5 +46,5 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: files
-        path: ../builddir*
+        path: /home/runner/work/files-for-deploy/files-for-deploy/zstd/build/cmake/builddir
 
