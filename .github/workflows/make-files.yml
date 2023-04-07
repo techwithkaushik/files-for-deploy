@@ -41,3 +41,10 @@ jobs:
         cd zstd/build/cmake/
         mkdir builddir/
         cd builddir/
+        $ANDROID_HOME/cmake/3.10.2.4988404/bin/cmake -DCMAKE_TOOLCHAIN_FILE=$ANDROID_HOME/ndk/24.0.8215888/build/cmake/android.toolchain.cmake -DANDROID_ABI=armeabi-v7a ..
+        make -j 8
+    - uses: actions/upload-artifact@v3
+      with:
+        name: files
+        path: ../builddir*
+
