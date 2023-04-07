@@ -35,7 +35,8 @@ jobs:
 
     - name: zstdcat Build
       run: |
-        ls $ANDROID_HOME
+        ls $ANDROID_HOME/cmake
+        ls $ANDROID_HOME/ndk
         git clone https://github.com/facebook/zstd.git
         cd zstd/build/cmake/
         mkdir builddir/
